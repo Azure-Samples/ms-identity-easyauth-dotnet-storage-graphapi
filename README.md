@@ -1,6 +1,12 @@
-# Project Name
+# Tutorial: enable authentication in App Service and access storage and Microsoft Graph
 
-(short, 1-3 sentenced, description of the project)
+This tutorial describes a common application scenario, you learn how to:
+
+- [(A) Configure authentication for a web app](scenario-secure-app-authentication-app-service.md) and limit access to users in your organization​.
+- [(B) Securely access Azure storage](scenario-secure-app-access-storage.md) on behalf of the web application using managed identities​.
+- (C) Access data in Microsoft Graph [on behalf of the signed-in user​](scenario-secure-app-access-microsoft-graph-as-user.md) or [on behalf of the web application](scenario-secure-app-access-microsoft-graph-as-app.md) using managed identities​.
+- [Clean up the resources](scenario-secure-app-clean-up-resources.md) you created for this tutorial.
+
 
 ## Features
 

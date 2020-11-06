@@ -3,10 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>WebApp_EasyAuth_DotNet</RootNamespace>
+    <UserSecretsId>83831229-25db-4781-aba5-a94598c6ab7a</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Graph" Version="3.18.0" />
+    <PackageReference Include="Microsoft.Graph" Version="3.19.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.2.0" />
   </ItemGroup>
 
 </Project>
