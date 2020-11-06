@@ -9,6 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using Microsoft.Identity.Web;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+
+
 namespace WebApp_EasyAuth_DotNet
 {
     public class Startup
@@ -23,6 +27,12 @@ namespace WebApp_EasyAuth_DotNet
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+                    .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
+                        .EnableTokenAcquisitionToCallDownstreamApi()
+                           .AddMicrosoftGraph(Configuration.GetSection("GraphBeta"))
+                           .AddInMemoryTokenCaches();
+
             services.AddRazorPages();
         }
 
