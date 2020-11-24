@@ -89,6 +89,11 @@ If you create and publish your web app through Visual Studio, the managed identi
 
 You need to grant your web app access to the storage account before you can create, read, or delete blobs. In a previous step, you configured the web app running on App Service with a managed identity. Using Azure RBAC, you can give the managed identity access to another resource, just like any security principal. The Storage Blob Data Contributor role gives the web app (represented by the system-assigned managed identity) read, write, and delete access to the blob container and data.  Read this article to learn how to [grant access to the storage account](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage#grant-access-to-the-storage-account).
 
+### Step 7: Visit the web app
+
+Open a browser and navigate to the deployed web app:  
+https://<web-app-name>.azurewebsites.net/Storage-MSI
+
 ## About the code
 
 This sample app was created using the [Microsoft.Identity.Web ASP.NET Core wep app template](https://github.com/AzureAD/microsoft-identity-web/wiki#asp-net-core-web-app-and-web-api-project-templates).

@@ -67,6 +67,11 @@ Now that you've enabled authentication and authorization on your web app, the we
 
 The web app now has the required permissions to access Microsoft Graph as the signed-in user. In this step, you configure App Service authentication and authorization to give you a usable access token for accessing Microsoft Graph.  For more information, read [Configure App Service to return a usable access token](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-user#configure-app-service-to-return-a-usable-access-token) in the tutorial on docs.microsoft.com.
 
+### Step 5: Visit the web app
+
+Open a browser and navigate to the deployed web app:  
+https://<web-app-name>.azurewebsites.net/Graph-OBO
+
 ## About the code
 
 This sample app was created using the [Microsoft.Identity.Web ASP.NET Core wep app template](https://github.com/AzureAD/microsoft-identity-web/wiki#asp-net-core-web-app-and-web-api-project-templates).

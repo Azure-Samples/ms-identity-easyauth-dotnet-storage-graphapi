@@ -17,7 +17,7 @@ products:
 
 ## About this sample
 ### Overview
-This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the app.  The web app authenticates a user and displays some of the user's profile information.  This sample is a companion to the [Access Microsoft Graph from a secured app as the app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app) tutorial on docs.microsoft.com.
+This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the app.  The web app authenticates a user and displays some of the user's profile information.  The web app then displays a list of users in the Azure Active Directory tenant. This sample is a companion to the [Access Microsoft Graph from a secured app as the app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app) tutorial on docs.microsoft.com.
 
 ### Scenario
 You want to limit access to your web app running on Azure App Service to people in your organization. App Service provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal or no code in your web app.
@@ -66,6 +66,11 @@ If you create and publish your web app through Visual Studio, the managed identi
 ### Step 4: Grant access to Microsoft Graph
 
 When accessing the Microsoft Graph, the managed identity needs to have proper permissions for the operation it wants to perform. Currently, there's no option to assign such permissions through the Azure portal. Use PowerShell or the Azure CLI to add the requested Microsoft Graph API permissions to the managed identity service principal object. For more information, read [Grant access to Microsoft Graph](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app#grant-access-to-microsoft-graph) in the tutorial on docs.microsoft.com.
+
+### Step 5: Visit the web app
+
+Open a browser and navigate to the deployed web app:  
+https://<web-app-name>.azurewebsites.net/Graph-MSI
 
 ## About the code
 
