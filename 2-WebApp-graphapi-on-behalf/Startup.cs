@@ -36,7 +36,7 @@ namespace WebApp_EasyAuth_DotNet
                 .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
                 .EnableTokenAcquisitionToCallDownstreamApi()
                            .AddMicrosoftGraph(Configuration.GetSection("GraphBeta"))
-                           .AddInMemoryTokenCaches(); ;
+                           .AddInMemoryTokenCaches(); 
 
             services.AddAuthorization(options =>
             {
