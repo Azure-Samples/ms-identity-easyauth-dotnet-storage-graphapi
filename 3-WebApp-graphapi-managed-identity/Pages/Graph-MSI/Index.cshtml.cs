@@ -16,8 +16,7 @@ namespace WebApp_EasyAuth_DotNet.Pages.Graph_MSI
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        //private readonly GraphServiceClient _graphServiceClient;
-
+        
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;

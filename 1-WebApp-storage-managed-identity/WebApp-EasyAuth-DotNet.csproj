@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>WebApp_EasyAuth_DotNet</RootNamespace>
-    <UserSecretsId>e189426e-bc44-4eae-8ed0-a48eaf1be13b</UserSecretsId>
+     <TargetFramework>netcoreapp3.1</TargetFramework>
+     <UserSecretsId>8eefd48e-d5b4-4682-af41-f423023001ee</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.2.3" />
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.*" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.*" />
   </ItemGroup>
-
 </Project>

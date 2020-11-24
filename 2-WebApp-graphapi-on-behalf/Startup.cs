@@ -2,15 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-using Microsoft.Identity.Web;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 
 namespace WebApp_EasyAuth_DotNet
@@ -28,12 +31,19 @@ namespace WebApp_EasyAuth_DotNet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-                    .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
-                        .EnableTokenAcquisitionToCallDownstreamApi()
+                .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
+                .EnableTokenAcquisitionToCallDownstreamApi()
                            .AddMicrosoftGraph(Configuration.GetSection("GraphBeta"))
-                           .AddInMemoryTokenCaches();
+                           .AddInMemoryTokenCaches(); 
 
-            services.AddRazorPages();
+            services.AddAuthorization(options =>
+            {
+                // By default, all incoming requests will be authorized according to the default policy
+                options.FallbackPolicy = options.DefaultPolicy;
+            });
+            services.AddRazorPages()
+                .AddMvcOptions(options => {})
+                .AddMicrosoftIdentityUI();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,11 +65,13 @@ namespace WebApp_EasyAuth_DotNet
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
