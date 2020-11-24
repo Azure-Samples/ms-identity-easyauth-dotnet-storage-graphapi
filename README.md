@@ -23,7 +23,7 @@ A set of ASP.NET Core sample apps and tutorial that demonstrate how you can:
 - (C) Access data in Microsoft Graph on behalf of the signed-in user​, or
 - (C) Access data in Microsoft Graph on behalf of the web application using managed identities​.
 
-![Web app accesses storage and Microsoft Graph](ReadmeFiles/web-app.svg)
+![Web app accesses storage and Microsoft Graph](ReadMeFiles/web-app.svg)
 
 Deploying a web app to Azure and configuring authentication is a pre-requisite to the other steps.  Accessing Azure storage using managed identities, accessing Microsoft Graph using managed identities, and accessing Microsoft Graph as the user are independent steps and can be done in any order.
 
