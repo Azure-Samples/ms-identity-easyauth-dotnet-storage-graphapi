@@ -81,6 +81,15 @@ Clone or download this repository. From your shell or command line:
 git clone https://github.com/Azure-Samples/ms-identity-easyauth-dotnet-storage-graphapi.git
 ```
 
+## Community Help and Support
+Use [Stack Overflow](http://stackoverflow.com/questions/) with the community to provide support, using the tags `web app`, `asp.net core`. We highly recommend you ask your questions on Stack Overflow first and browse existing issues to see if someone has asked your question before.
+
+If you find and bug in the sample, please raise the issue on [GitHub Issues](https://github.com/Azure-Samples/ms-identity-easyauth-dotnet-storage-graphapi/issues).
+
+## Contributing
+If you'd like to contribute to this sample, see [CONTRIBUTING.MD](CONTRIBUTING.md).
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](opencode@microsoft.com) with any additional questions or comments.
 ## Documentation
 
 [Tutorial: enable authentication in App Service and access storage and Microsoft Graph](https://docs.microsoft.com/azure/app-service/scenario-secure-app-overview) articles on docs.microsoft.com.
