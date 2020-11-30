@@ -69,8 +69,8 @@ When accessing the Microsoft Graph, the managed identity needs to have proper pe
 
 ### Step 5: Visit the web app
 
-Open a browser and navigate to the deployed web app:  
-https://<web-app-name>.azurewebsites.net/Graph-MSI
+Open a browser and navigate to the deployed web app (replace *web-app-name* with the name of your web app):  
+https://&lt;web-app-name&gt;.azurewebsites.net/Graph-MSI
 
 ## About the code
 

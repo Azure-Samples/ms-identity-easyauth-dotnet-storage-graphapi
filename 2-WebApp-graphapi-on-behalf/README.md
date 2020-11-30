@@ -69,8 +69,8 @@ The web app now has the required permissions to access Microsoft Graph as the si
 
 ### Step 5: Visit the web app
 
-Open a browser and navigate to the deployed web app:  
-https://<web-app-name>.azurewebsites.net/Graph-OBO
+Open a browser and navigate to the deployed web app (replace *web-app-name* with the name of your web app):  
+https://&lt;web-app-name&gt;.azurewebsites.net/Graph-OBO
 
 ## About the code
 
