@@ -91,8 +91,8 @@ You need to grant your web app access to the storage account before you can crea
 
 ### Step 7: Visit the web app
 
-Open a browser and navigate to the deployed web app:  
-https://<web-app-name>.azurewebsites.net/Storage-MSI
+Open a browser and navigate to the deployed web app (replace *web-app-name* with the name of your web app):  
+https://&lt;web-app-name&gt;.azurewebsites.net/Storage-MSI
 
 ## About the code
 
