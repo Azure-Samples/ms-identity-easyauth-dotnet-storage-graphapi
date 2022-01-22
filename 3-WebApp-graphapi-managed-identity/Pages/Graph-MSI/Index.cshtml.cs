@@ -26,8 +26,12 @@ namespace WebApp_EasyAuth_DotNet.Pages.Graph_MSI
         public IList<MSGraphUser> Users { get; set; }
         public async Task OnGetAsync()
         {
-            // Create the Graph service client with a DefaultAzureCredential which gets an access token using the available Managed Identity
-            var credential = new DefaultAzureCredential();
+            // Create the Graph service client with a ChainedTokenCredential which gets an access
+            // token using the available Managed Identity or environment variables if running
+            // in development.
+            var credential = new ChainedTokenCredential(
+                new ManagedIdentityCredential(),
+                new EnvironmentCredential());
             var token = credential.GetToken(
                 new Azure.Core.TokenRequestContext(
                     new[] { "https://graph.microsoft.com/.default" }));
