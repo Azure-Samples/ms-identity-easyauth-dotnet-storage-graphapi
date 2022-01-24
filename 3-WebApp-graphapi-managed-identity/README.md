@@ -98,11 +98,15 @@ services.AddRazorPages()
 ```
 
 ### Call Microsoft Graph as the app
-The call to Microsoft Graph is performed in the *Pages/Graph-MSI/Index.cshtml.cs* file, in the `public async Task OnGetAsync()` method. The DefaultAzureCredential class is used to get a token credential for your code to authorize requests to Azure Storage. Create an instance of the DefaultAzureCredential class, which uses the managed identity to fetch tokens and attach them to the service client. The following code example gets the authenticated token credential and uses it to create a service client object, which gets the users in the group.
+The call to Microsoft Graph is performed in the *Pages/Graph-MSI/Index.cshtml.cs* file, in the `public async Task OnGetAsync()` method. The ChainedTokenCredential class is used to get a token credential for your code to authorize requests to Azure Storage. Create an instance of the ChainedTokenCredential class and add new ManagedIdentityCredential and EnvironmentCredential instances. When running in an App Service environment, ManagedIdentityCredential uses the managed identity to fetch tokens and attach them to the service client. When running locally, a managed identity can't be found and EnvironmentCredential uses credentials specified in the environment variables to fetch tokens.  The following code example gets the authenticated token credential and uses it to create a service client object, which gets the users in the group.
 
 ```csharp
-// Create the Graph service client with a DefaultAzureCredential which gets an access token using the available Managed Identity
-var credential = new DefaultAzureCredential();
+// Create the Graph service client with a ChainedTokenCredential which gets an access
+// token using the available Managed Identity or environment variables if running
+// in development.
+var credential = new ChainedTokenCredential(
+    new ManagedIdentityCredential(),
+    new EnvironmentCredential());
 var token = credential.GetToken(
     new Azure.Core.TokenRequestContext(
         new[] { "https://graph.microsoft.com/.default" }));
