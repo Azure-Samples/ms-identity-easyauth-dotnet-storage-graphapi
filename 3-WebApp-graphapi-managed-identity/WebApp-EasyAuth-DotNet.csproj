@@ -2,7 +2,7 @@
   <PropertyGroup>
      <TargetFramework>netcoreapp3.1</TargetFramework>
      <UserSecretsId>d33b2259-2213-44e5-93c6-66fcadaf8fe5</UserSecretsId>
-	  <AspNetCoreHostingModel>OutProcess</AspNetCoreHostingModel>
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Identity.Web" Version="1.*" />

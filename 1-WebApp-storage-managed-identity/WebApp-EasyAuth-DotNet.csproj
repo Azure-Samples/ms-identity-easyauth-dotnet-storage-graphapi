@@ -2,7 +2,7 @@
   <PropertyGroup>
      <TargetFramework>netcoreapp3.1</TargetFramework>
      <UserSecretsId>8eefd48e-d5b4-4682-af41-f423023001ee</UserSecretsId>
-	  <AspNetCoreHostingModel>OutProcess</AspNetCoreHostingModel>
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0" />
