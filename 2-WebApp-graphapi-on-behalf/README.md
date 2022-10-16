@@ -17,7 +17,7 @@ products:
 
 ## About this sample
 ### Overview
-This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the signed-in user.  The web app authenticates a user and displays some of the user's profile information.  This sample is a companion to the [Access Microsoft Graph from a secured app as the user](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-user) tutorial on docs.microsoft.com.
+This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the signed-in user.  The web app authenticates a user and displays some of the user's profile information.  This sample is a companion to the [Access Microsoft Graph from a secured app as the user](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-user) tutorial on docs.microsoft.com.
 
 ### Scenario
 You want to limit access to your web app running on Azure App Service to people in your organization. App Service provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal or no code in your web app.
@@ -57,15 +57,15 @@ This project has one WebApp project. To deploy it to Azure App Service, you'll n
 
 For information on how to do this from Visual Studio, read the [.NET Core quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).  
 
-After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://docs.microsoft.com/azure/app-service/scenario-secure-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
+After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
 
 ### Step 3: Grant web app access to call Microsoft Graph
 
-Now that you've enabled authentication and authorization on your web app, the web app is registered with the Microsoft identity platform and is backed by an Azure AD application. In this step, you give the web app permissions to access Microsoft Graph for the user. For more information, read [Grant web app access](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-user#grant-front-end-access-to-call-microsoft-graph) in the tutorial on docs.microsoft.com.
+Now that you've enabled authentication and authorization on your web app, the web app is registered with the Microsoft identity platform and is backed by an Azure AD application. In this step, you give the web app permissions to access Microsoft Graph for the user. For more information, read [Grant web app access](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-user#grant-front-end-access-to-call-microsoft-graph) in the tutorial on docs.microsoft.com.
 
 ### Step 4: Configure App Service to return a usable access token
 
-The web app now has the required permissions to access Microsoft Graph as the signed-in user. In this step, you configure App Service authentication and authorization to give you a usable access token for accessing Microsoft Graph.  For more information, read [Configure App Service to return a usable access token](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-user#configure-app-service-to-return-a-usable-access-token) in the tutorial on docs.microsoft.com.
+The web app now has the required permissions to access Microsoft Graph as the signed-in user. In this step, you configure App Service authentication and authorization to give you a usable access token for accessing Microsoft Graph.  For more information, read [Configure App Service to return a usable access token](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-user?tabs=azure-resource-explorer%2Cprogramming-language-csharp#configure-app-service-to-return-a-usable-access-token) in the tutorial on docs.microsoft.com.
 
 ### Step 5: Visit the web app
 
@@ -153,4 +153,4 @@ else
 
 ## Resources
 
-Read the [Access Microsoft Graph from a secured app as the user](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-user) tutorial.
+Read the [Access Microsoft Graph from a secured app as the user](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-user) tutorial.

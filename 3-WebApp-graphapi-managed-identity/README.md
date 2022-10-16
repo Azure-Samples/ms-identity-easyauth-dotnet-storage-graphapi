@@ -17,7 +17,7 @@ products:
 
 ## About this sample
 ### Overview
-This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the app.  The web app authenticates a user and displays some of the user's profile information.  The web app then displays a list of users in the Azure Active Directory tenant. This sample is a companion to the [Access Microsoft Graph from a secured app as the app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app) tutorial on docs.microsoft.com.
+This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Microsoft Graph as the app.  The web app authenticates a user and displays some of the user's profile information.  The web app then displays a list of users in the Azure Active Directory tenant. This sample is a companion to the [Access Microsoft Graph from a secured app as the app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-app) tutorial on docs.microsoft.com.
 
 ### Scenario
 You want to limit access to your web app running on Azure App Service to people in your organization. App Service provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal or no code in your web app.
@@ -55,17 +55,17 @@ This project has one WebApp project. To deploy it to Azure App Service, you'll n
 - create a web app
 - publish the web app to Azure
 
-For information on how to do this from Visual Studio, read the [.NET Core quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).  
+For information on how to do this from Visual Studio, read the [.NET Core quickstart](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).  
 
-After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://docs.microsoft.com/azure/app-service/scenario-secure-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
+After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
 
 ### Step 3: Enable managed identity on an app
 
-If you create and publish your web app through Visual Studio, the managed identity was enabled on your app for you.  Read this article to learn how to [enable a managed identity on a web app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage#enable-managed-identity-on-an-app).
+If you create and publish your web app through Visual Studio, the managed identity was enabled on your app for you.  Read this article to learn how to [enable a managed identity on a web app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-app?tabs=azure-powershell%2Cprogramming-language-csharp#enable-managed-identity-on-app).
 
 ### Step 4: Grant access to Microsoft Graph
 
-When accessing the Microsoft Graph, the managed identity needs to have proper permissions for the operation it wants to perform. Currently, there's no option to assign such permissions through the Azure portal. Use PowerShell or the Azure CLI to add the requested Microsoft Graph API permissions to the managed identity service principal object. For more information, read [Grant access to Microsoft Graph](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app#grant-access-to-microsoft-graph) in the tutorial on docs.microsoft.com.
+When accessing the Microsoft Graph, the managed identity needs to have proper permissions for the operation it wants to perform. Currently, there's no option to assign such permissions through the Azure portal. Use PowerShell or the Azure CLI to add the requested Microsoft Graph API permissions to the managed identity service principal object. For more information, read [Grant access to Microsoft Graph](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-app?tabs=azure-powershell%2Cprogramming-language-csharp#grant-access-to-microsoft-graph) in the tutorial on docs.microsoft.com.
 
 ### Step 5: Visit the web app
 
@@ -146,4 +146,4 @@ else
 
 ## Resources
 
-Read the [Access Microsoft Graph from a secured app as the app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-microsoft-graph-as-app) tutorial.
+Read the [Access Microsoft Graph from a secured app as the app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-microsoft-graph-as-app) tutorial.

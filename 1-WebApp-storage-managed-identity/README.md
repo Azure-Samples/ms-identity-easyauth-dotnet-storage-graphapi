@@ -17,7 +17,7 @@ products:
 
 ## About this sample
 ### Overview
-This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Azure storage as the web app (not the signed-in user).  The web app authenticates users and also uploads, displays, and deletes text blobs in Azure storage. This sample is a companion to the [Access Azure Storage from a web app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage) tutorial on docs.microsoft.com.
+This sample demonstrates an ASP.NET Core web app that uses authentication to limit access to users in your organization​ and then calls Azure storage as the web app (not the signed-in user).  The web app authenticates users and also uploads, displays, and deletes text blobs in Azure storage. This sample is a companion to the [Access Azure Storage from a web app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-storage) tutorial on docs.microsoft.com.
 
 ### Scenario
 You want to limit access to your web app running on Azure App Service to people in your organization. App Service provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal or no code in your web app.
@@ -52,7 +52,7 @@ Create a storage account and Blob Storage container for the web app to access.
 
 Every storage account must belong to an Azure resource group. A resource group is a logical container for grouping your Azure services. When you create a storage account, you have the option to either create a new resource group or use an existing resource group. 
 
-This article shows how to [create a new resource group, a storage account, and a Blob Storage container](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage#create-a-storage-account-and-blob-storage-container).
+This article shows how to [create a new resource group, a storage account, and a Blob Storage container](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-storage?tabs=azure-portal%2Cprogramming-language-csharp#create-a-storage-account-and-blob-storage-container).
 
 Make sure you take note of the storage account name and the Blob Storage container name, which you will need in the next step.
 
@@ -77,17 +77,17 @@ This project has one WebApp project. To deploy it to Azure App Service, you'll n
 - create a web app
 - publish the web app to Azure
 
-For information on how to do this from Visual Studio, read the [.NET Core quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).  Use the same resource group that you used in step 2 instead of creating a new resource group.
+For information on how to do this from Visual Studio, read the [.NET Core quickstart](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).  Use the same resource group that you used in step 2 instead of creating a new resource group.
 
-After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://docs.microsoft.com/azure/app-service/scenario-secure-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
+After you've deployed the web app to Azure, [configure the Azure App Service authentication/authorization module](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-authentication-app-service).  Also verify that only users in your organization can access the web site.
 
 ### Step 5: Enable managed identity on an app
 
-If you create and publish your web app through Visual Studio, the managed identity was enabled on your app for you.  Read this article to learn how to [enable a managed identity on a web app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage#enable-managed-identity-on-an-app).
+If you create and publish your web app through Visual Studio, the managed identity was enabled on your app for you.  Read this article to learn how to [enable a managed identity on a web app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-storage?tabs=azure-portal%2Cprogramming-language-csharp#enable-managed-identity-on-an-app).
 
 ### Step 6: Grant access to the storage account
 
-You need to grant your web app access to the storage account before you can create, read, or delete blobs. In a previous step, you configured the web app running on App Service with a managed identity. Using Azure RBAC, you can give the managed identity access to another resource, just like any security principal. The Storage Blob Data Contributor role gives the web app (represented by the system-assigned managed identity) read, write, and delete access to the blob container and data.  Read this article to learn how to [grant access to the storage account](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage#grant-access-to-the-storage-account).
+You need to grant your web app access to the storage account before you can create, read, or delete blobs. In a previous step, you configured the web app running on App Service with a managed identity. Using Azure RBAC, you can give the managed identity access to another resource, just like any security principal. The Storage Blob Data Contributor role gives the web app (represented by the system-assigned managed identity) read, write, and delete access to the blob container and data.  Read this article to learn how to [grant access to the storage account](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-storage?tabs=azure-portal%2Cprogramming-language-csharp#grant-access-to-the-storage-account).
 
 ### Step 7: Visit the web app
 
@@ -181,4 +181,4 @@ else
 
 ## Resources
 
-Read the [Access Azure Storage from a web app](https://docs.microsoft.com/azure/app-service/scenario-secure-app-access-storage) tutorial.
+Read the [Access Azure Storage from a web app](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-access-storage) tutorial.

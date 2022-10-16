@@ -27,11 +27,11 @@ A set of ASP.NET Core sample apps and tutorial that demonstrate how you can:
 
 Deploying a web app to Azure and configuring authentication is a pre-requisite to the other steps.  Accessing Azure storage using managed identities, accessing Microsoft Graph using managed identities, and accessing Microsoft Graph as the user are independent steps and can be done in any order.
 
-These sample apps back the [Tutorial: enable authentication in App Service and access storage and Microsoft Graph](https://docs.microsoft.com/azure/app-service/scenario-secure-app-overview) articles on docs.microsoft.com.
+These sample apps back the [Tutorial: enable authentication in App Service and access storage and Microsoft Graph](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-overview) articles on docs.microsoft.com.
 
 ## Configure authentication for a web app and limit access to users in your organization
 
-If you are a Line of Business (LOB) developer, you'd probably want to only sign-in users in your organization with their work or school accounts. In this step, you learn how to enable the Azure App Service authentication/authorization module in Azure App Service, so you can sign in users and access data by writing minimal or no code in your web app.  This step is required and is done inline with the other steps.  Read [Add authentication to your web app running on Azure App Service](https://docs.microsoft.com/azure/app-service/scenario-secure-app-authentication-app-service) for more information.
+If you are a Line of Business (LOB) developer, you'd probably want to only sign-in users in your organization with their work or school accounts. In this step, you learn how to enable the Azure App Service authentication/authorization module in Azure App Service, so you can sign in users and access data by writing minimal or no code in your web app.  This step is required and is done inline with the other steps.  Read [Add authentication to your web app running on Azure App Service](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-authentication-app-service) for more information.
 
 ## Securely access Azure storage on behalf of the web application using managed identities​
 
@@ -92,4 +92,4 @@ If you'd like to contribute to this sample, see [CONTRIBUTING.MD](CONTRIBUTING.m
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](opencode@microsoft.com) with any additional questions or comments.
 ## Documentation
 
-[Tutorial: enable authentication in App Service and access storage and Microsoft Graph](https://docs.microsoft.com/azure/app-service/scenario-secure-app-overview) articles on docs.microsoft.com.
+[Tutorial: enable authentication in App Service and access storage and Microsoft Graph](https://learn.microsoft.com/azure/active-directory/develop/multi-service-web-app-overview) articles on docs.microsoft.com.
