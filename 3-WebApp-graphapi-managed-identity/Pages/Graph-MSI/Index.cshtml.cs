@@ -32,26 +32,18 @@ namespace WebApp_EasyAuth_DotNet.Pages.Graph_MSI
             var credential = new ChainedTokenCredential(
                 new ManagedIdentityCredential(),
                 new EnvironmentCredential());
-            var token = credential.GetToken(
-                new Azure.Core.TokenRequestContext(
-                    new[] { "https://graph.microsoft.com/.default" }));
 
-            var accessToken = token.Token;
+            string[] scopes = new[] { "https://graph.microsoft.com/.default" };
+
             var graphServiceClient = new GraphServiceClient(
-                new DelegateAuthenticationProvider((requestMessage) =>
-                {
-                    requestMessage
-                    .Headers
-                    .Authorization = new AuthenticationHeaderValue("bearer", accessToken);
-
-                    return Task.CompletedTask;
-                }));
+                credential, scopes);
 
             List<MSGraphUser> msGraphUsers = new List<MSGraphUser>();
             try
             {
-                var users = await graphServiceClient.Users.Request().GetAsync();
-                foreach (var u in users)
+                //var users = await graphServiceClient.Users.Request().GetAsync();
+                var users = await graphServiceClient.Users.GetAsync();
+                foreach (var u in users.Value)
                 {
                     MSGraphUser user = new MSGraphUser();
                     user.userPrincipalName = u.UserPrincipalName;
@@ -69,5 +61,7 @@ namespace WebApp_EasyAuth_DotNet.Pages.Graph_MSI
 
             Users = msGraphUsers;
         }
+
+
     }
 }
