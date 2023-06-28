@@ -31,12 +31,14 @@ namespace WebApp_EasyAuth_DotNet
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
+            services.AddOptions();
+            string[] initialScopes = Configuration.GetValue<string>("DownstreamApi:Scopes")?.Split(' ');
 
             services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
-                .EnableTokenAcquisitionToCallDownstreamApi()
-                           .AddMicrosoftGraph(Configuration.GetSection("GraphBeta"))
+                    .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
+                    .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
+                           .AddMicrosoftGraph(Configuration.GetSection("DownstreamApi"))
                            .AddInMemoryTokenCaches(); 
 
             services.AddAuthorization(options =>
@@ -45,8 +47,11 @@ namespace WebApp_EasyAuth_DotNet
                 options.FallbackPolicy = options.DefaultPolicy;
             });
             services.AddRazorPages()
-                .AddMvcOptions(options => {})
+                .AddMvcOptions(options => {})                
                 .AddMicrosoftIdentityUI();
+
+            services.AddControllersWithViews()
+                    .AddMicrosoftIdentityUI();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

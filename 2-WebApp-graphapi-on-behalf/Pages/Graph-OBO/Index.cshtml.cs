@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebApp_EasyAuth_DotNet.Pages.Graph_OBO
 {
-    [AuthorizeForScopes(Scopes = new[] { "user.read" })]
+    [AuthorizeForScopes(Scopes = new[] { "User.Read" })]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
@@ -28,11 +28,11 @@ namespace WebApp_EasyAuth_DotNet.Pages.Graph_OBO
         {
             try
             {
-                var user = await _graphServiceClient.Me.Request().GetAsync();
+                var user = await _graphServiceClient.Me.GetAsync();
                 ViewData["Me"] = user;
                 ViewData["name"] = user.DisplayName;
 
-                using (var photoStream = await _graphServiceClient.Me.Photo.Content.Request().GetAsync())
+                using (var photoStream = await _graphServiceClient.Me.Photo.Content.GetAsync())
                 {
                     byte[] photoByte = ((MemoryStream)photoStream).ToArray();
                     ViewData["photo"] = Convert.ToBase64String(photoByte);
