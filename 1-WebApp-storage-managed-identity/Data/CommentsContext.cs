@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApp_EasyAuth_DotNet.Helpers;
 using WebApp_EasyAuth_DotNet.Models;
@@ -10,7 +9,7 @@ namespace WebApp_EasyAuth_DotNet.Data
     public class CommentsContext
     {
         // make sure that appsettings.json is filled with the necessary details of the azure storage
-        private readonly AzureStorageConfig _config = null;
+        private readonly AzureStorageConfig _config;
 
         public CommentsContext(IOptions<AzureStorageConfig> config)
         {
@@ -18,7 +17,7 @@ namespace WebApp_EasyAuth_DotNet.Data
 
         }
 
-        public List<Comment> Comments { get; set; }
+        public List<Comment>? Comments { get; set; }
 
         public async Task<List<Comment>> GetComments()
         {

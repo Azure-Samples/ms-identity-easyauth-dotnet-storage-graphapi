@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Azure.Identity;
+using System.Text;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Text;
-using System.IO;
-using Azure.Identity;
 
 namespace WebApp_EasyAuth_DotNet.Helpers
 {

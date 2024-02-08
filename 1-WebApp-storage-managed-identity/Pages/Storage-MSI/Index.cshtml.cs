@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApp_EasyAuth_DotNet.Models;
+using System.Collections.Generic;
 
 namespace WebApp_EasyAuth_DotNet.Pages.Storage_MSI
 {
@@ -16,7 +13,7 @@ namespace WebApp_EasyAuth_DotNet.Pages.Storage_MSI
             _context = context;
         }
 
-        public IList<Comment> Comments { get; set; }
+        public IList<Comment>? Comments { get; set; }
         public async Task OnGetAsync()
         {
             Comments = await _context.GetComments();

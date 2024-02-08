@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp-EasyAuth-DotNet", "WebApp-EasyAuth-DotNet.csproj", "{0F7E4180-993F-4CAB-AF6A-0EE6D4B4DD5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp-EasyAuth-DotNet", "WebApp-EasyAuth-DotNet.csproj", "{7A5A3952-0620-44FE-9CB6-84A2AE29861C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F7E4180-993F-4CAB-AF6A-0EE6D4B4DD5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F7E4180-993F-4CAB-AF6A-0EE6D4B4DD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F7E4180-993F-4CAB-AF6A-0EE6D4B4DD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F7E4180-993F-4CAB-AF6A-0EE6D4B4DD5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5A3952-0620-44FE-9CB6-84A2AE29861C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5A3952-0620-44FE-9CB6-84A2AE29861C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5A3952-0620-44FE-9CB6-84A2AE29861C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5A3952-0620-44FE-9CB6-84A2AE29861C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EC5E62E9-0F7E-40F5-B6B0-6E0E188871AE}
+		SolutionGuid = {650484A4-BCC7-4FB1-8142-EBA2FFAEB091}
 	EndGlobalSection
 EndGlobal
