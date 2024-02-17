@@ -1,22 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WebApp_EasyAuth_DotNet.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Graph;
 using Azure.Identity;
-using Microsoft.Graph.Core;
-using System.Net.Http.Headers;
-using WebApp_EasyAuth_DotNet.Models;
+
 
 namespace WebApp_EasyAuth_DotNet.Pages.Graph_MSI
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;

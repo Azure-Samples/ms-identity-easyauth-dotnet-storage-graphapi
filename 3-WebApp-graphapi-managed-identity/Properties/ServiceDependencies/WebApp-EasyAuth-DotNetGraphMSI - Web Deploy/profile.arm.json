@@ -2,26 +2,26 @@
   "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "_dependencyType": "appService.windows"
+    "_dependencyType": "compute.appService.windows"
   },
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "WebApp-EasyAuth-DotNet4",
+      "defaultValue": "WebApp-EasyAuth-DotNet",
       "metadata": {
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
       }
     },
     "resourceGroupLocation": {
       "type": "string",
-      "defaultValue": "northcentralus",
+      "defaultValue": "eastus",
       "metadata": {
         "description": "Location of the resource group. Resource groups could have different location than resources, however by default we use API versions from latest hybrid profile which support all locations for resource types we support."
       }
     },
     "resourceName": {
       "type": "string",
-      "defaultValue": "WebApp-EasyAuth-DotNet20221015164334",
+      "defaultValue": "WebApp-EasyAuth-DotNetGraphMSI",
       "metadata": {
         "description": "Name of the main resource to be created by this template."
       }
